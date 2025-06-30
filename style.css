@@ -19,7 +19,7 @@ pre {
     text-align: center;
     margin-top: 0;
     margin-bottom: 0;
-    width: 30vw;
+    width: 30%;
     text-wrap: wrap;
     height: 12vw;
 }
@@ -29,12 +29,12 @@ pre {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: 36vw;
+    width: 36%;
 }
 
 .box {
     height: 12vw;
-    width: 12vw;
+    width: 33.3%;
     background-color: #92b4a7;
     border: 2px solid #f3f9d2;
     font-size: 9vw;
