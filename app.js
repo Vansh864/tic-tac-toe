@@ -35,20 +35,6 @@ boxes.forEach((box) => {
         }
         box.disabled = true; //to disable it as a button
 
-        let result = checkWinner();
-        if(result === "Win") {
-            for(let el of boxes) {
-                el.style.display = "none";
-            }
-            gameDiv.style.display = "none";
-            document.querySelector("h1").after(winMsg);
-            winMsg.innerText = `${turnX ? "Player 2" : "Player 1"} wins the game`;
-
-            reset.classList.add("reset");
-            document.querySelector("pre").after(reset);
-            reset.innerText = `Reset Game`;
-        }
-
         let draw = drawCheck();
         if(draw) {
             for(let el of boxes) {
@@ -57,6 +43,20 @@ boxes.forEach((box) => {
             gameDiv.style.display = "none";
             document.querySelector("h1").after(winMsg);
             winMsg.innerText = `Game draw`;
+
+            reset.classList.add("reset");
+            document.querySelector("pre").after(reset);
+            reset.innerText = `Reset Game`;
+        }
+
+        let result = checkWinner();
+        if(result === "Win") {
+            for(let el of boxes) {
+                el.style.display = "none";
+            }
+            gameDiv.style.display = "none";
+            document.querySelector("h1").after(winMsg);
+            winMsg.innerText = `${turnX ? "Player 2" : "Player 1"} wins the game`;
 
             reset.classList.add("reset");
             document.querySelector("pre").after(reset);
